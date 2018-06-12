@@ -1,0 +1,23 @@
+﻿<Window x:Class="PortDataExport.UI.Views.SqlDataWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PortDataExport.UI.Views"
+        mc:Ignorable="d"
+        Title="SQL语句结果" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Visible">
+            <TextBlock Name="txtbSqls"/>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  Grid.Row="1">
+            <Button Name="btnCopy" Content="复制到剪贴板" Click="btnCopy_Click" Margin="10"/>
+            <Button Name="btnSave" Content="保存" Click="btnSave_Click" Margin="10"/>
+            
+        </StackPanel>
+    </Grid>
+</Window>

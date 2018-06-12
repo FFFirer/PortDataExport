@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortDataExport.UI", "PortDataExport.UI\PortDataExport.UI.csproj", "{E83F1C04-6878-4E9B-B0A2-C3F9CFB05881}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83F1C04-6878-4E9B-B0A2-C3F9CFB05881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83F1C04-6878-4E9B-B0A2-C3F9CFB05881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83F1C04-6878-4E9B-B0A2-C3F9CFB05881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83F1C04-6878-4E9B-B0A2-C3F9CFB05881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

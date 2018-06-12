@@ -1,0 +1,39 @@
+﻿<Window x:Class="PortDataExport.UI.Views.Export"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PortDataExport.UI.Views"
+        mc:Ignorable="d"
+        Title="Export" Height="278.666" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="第一步：" HorizontalContentAlignment="Center"/>
+        <WrapPanel Grid.Row="1">
+            <!--生成SQL查询语句-->
+
+            <Label Content="起始日期" HorizontalAlignment="Right" Width="60" Margin="5"/>
+            <DatePicker Name="dpStart" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="结束日期" RenderTransformOrigin="0.124,0.387" Margin="5"/>
+            <DatePicker Name="dpEnd" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="5"/>
+            <Button Content="生成查询SQL语句" Name="btnNewSql" Width="100" Height="20" Margin="5" Click="btnNewSql_Click"/>
+            <!--<Button Content="选择查询语句保存的位置" Name="btnSetSavePath" Width="138" Height="20" Margin="5" Click="btnSetSavePath_Click"/>-->
+        </WrapPanel>
+        <Label Grid.Row="2" Content="第二步：" HorizontalContentAlignment="Center"/>
+        <WrapPanel Grid.Row="3">
+            <TextBox Name="txtFilePath" Width="340" Margin="5"/>
+            <Button Name="btnSelectFile" Content="选择文件" Margin="5" Click="btnSelectFile_Click"/>
+            <Button x:Name="btnNewExcel" Content="生成Excel文件(.xls)" Margin="5" Click="btnNewExcel_Click"/>
+            <Button Name="btnNewExcelx" Content="生成Excel文件(.xlsx)" Margin="5" Click="btnNewExcelx_Click" Visibility="Collapsed"/>
+        </WrapPanel>
+        <Grid Grid.Row="2">
+            <Label Content="" Name="lblStaus"/>
+        </Grid>
+    </Grid>
+</Window>
