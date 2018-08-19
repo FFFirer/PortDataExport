@@ -175,7 +175,7 @@ namespace PortDataExport.UI.Views
             Int64 Today = CommonHelpers.GetTimeStamp(today);
             for(Int64 i = startStamp; i <= endStamp; i += oneDay)
             {
-                result.Add(string.Format("select count(billcode),sortportcode from alreadysortinfo where sorttime>'{0}' and sorttime<'{0}' group by sortportcode;", i, i + oneDay)); 
+                result.Add(string.Format("select count(billcode),sortportcode from alreadysortinfohist where sorttime>'{0}' and sorttime<'{0}' group by sortportcode;", i, i + oneDay)); 
             }
 
             return result;
