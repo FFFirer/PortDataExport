@@ -25,7 +25,7 @@ namespace PortDataExport.UI
         {
             InitializeComponent();
             this.Hide();
-            Views.Export ex = new Export();
+            Views.ExportWithMySQL ex = new ExportWithMySQL();
             ex.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             ex.Show();
         }

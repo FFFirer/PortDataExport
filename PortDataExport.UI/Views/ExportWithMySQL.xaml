@@ -1,0 +1,26 @@
+﻿<Window x:Class="PortDataExport.UI.Views.ExportWithMySQL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PortDataExport.UI.Views"
+        mc:Ignorable="d"
+        Title="格口数据导出" Height="147.246" Width="377.049" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Label Content="格口总数" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60" Margin="5"/>
+            <TextBox x:Name="txtPortNum" VerticalAlignment="Center" Width="80" Height="20" Margin="5"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1">
+            <Label Content="起始日期" HorizontalAlignment="Right" Width="60" Margin="5"/>
+            <DatePicker Name="dpStart" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+            <Label Content="结束日期" RenderTransformOrigin="0.124,0.387" Margin="5"/>
+            <DatePicker Name="dpEnd" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="5"/>
+            <Button Content="导出数据到xls" Name="btnExportData2Xls" Width="100" Height="20" Margin="5" Click="btnExportData2Xls_Click"/>
+        </WrapPanel>
+    </Grid>
+</Window>
